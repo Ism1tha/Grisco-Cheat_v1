@@ -25,6 +25,9 @@
     <Filter Include="Source Files\drawing">
       <UniqueIdentifier>{e4b703d6-46f7-49c0-99e2-4f01a400df3f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\debug">
+      <UniqueIdentifier>{e36214a0-43fa-4cbd-b163-9a9e2b258397}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="drawing.cpp">
       <Filter>Source Files\drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files\debug</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="drawing.h">
       <Filter>Source Files\drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Source Files\debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

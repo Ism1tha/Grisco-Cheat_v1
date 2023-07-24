@@ -1,6 +1,7 @@
 #include "includes.h"
 #include "cgui.h"
 #include "drawing.h"
+#include "debug.h"
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -113,7 +114,6 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 	}
 	while (true)
 	{
-		// If INSERT key is pressed, toggle the menu
 		if (GetAsyncKeyState(VK_INSERT) & 1)
 		{
 			showMenu = !showMenu;
@@ -122,7 +122,17 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 		else if (GetAsyncKeyState(VK_END) & 1)
 		{
 			kiero::shutdown();
+			if(consoleInitialized)
+				DisableDebugConsole();
 			FreeLibraryAndExitThread(_hModule, 0);
+		}
+		if (debugConsole && !consoleInitialized)
+		{
+			EnableDebugConsole();
+		}
+		else if (!debugConsole && consoleInitialized)
+		{
+			DisableDebugConsole();
 		}
 		Sleep(30);
 	}
