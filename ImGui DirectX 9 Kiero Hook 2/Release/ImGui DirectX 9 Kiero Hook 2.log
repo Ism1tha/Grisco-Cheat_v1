@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: El directorio intermedio (Release\) contiene archivos compartidos de otro proyecto (ImGui DirectX 9 Kiero Hook 2.vcxproj). Esto puede dar lugar a un comportamiento incorrecto de limpieza y recompilación.
+  main.cpp
+  Generando código
+  0 of 945 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+  ImGui DirectX 9 Kiero Hook 2.vcxproj -> C:\Users\xGaLa\source\repos\Grisco-Cheat_v1\Release\Grisco-Cheat_v1.dll
