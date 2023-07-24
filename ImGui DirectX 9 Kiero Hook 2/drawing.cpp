@@ -1,5 +1,4 @@
-#include "d3d9.h"
-#include "d3dx9.h"
+#include "includes.h"
 
 void DrawFontA(int X, int Y, D3DCOLOR Color, const char* text, ID3DXFont* pFont)
 {

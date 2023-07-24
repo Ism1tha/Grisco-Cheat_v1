@@ -28,6 +28,9 @@
     <Filter Include="Source Files\debug">
       <UniqueIdentifier>{e36214a0-43fa-4cbd-b163-9a9e2b258397}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cheats">
+      <UniqueIdentifier>{83289f5b-e0b5-422f-a412-6ed36e34f86f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -77,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="debug.cpp">
       <Filter>Source Files\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="cheats.cpp">
+      <Filter>Source Files\cheats</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +148,12 @@
     </ClInclude>
     <ClInclude Include="debug.h">
       <Filter>Source Files\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="csgo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cheats.h">
+      <Filter>Source Files\cheats</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

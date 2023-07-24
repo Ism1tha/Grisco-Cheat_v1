@@ -1,3 +1,3 @@
 #pragma once
 
-void CustomStyleImGui(ImGuiStyle* dst = nullptr);
+void CustomStyleImGui(ImGuiStyle* dst);

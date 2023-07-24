@@ -1,7 +1,4 @@
 #include "includes.h"
-#include "cgui.h"
-#include "drawing.h"
-#include "debug.h"
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
@@ -13,7 +10,7 @@ HMODULE _hModule;
 
 bool showMenu = false;
 bool debugConsole = false;
-bool bunnyHop = false;
+bool bhopEnabled = false;
 bool espSnapLines = false;
 
 ID3DXFont* pFont;
@@ -54,7 +51,7 @@ long __stdcall hkEndScene(LPDIRECT3DDEVICE9 pDevice)
 		ImGui::SetNextWindowSize(ImVec2(400, 200));
 		ImGui::Begin("Grisco Cheat v1", &showMenu, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
 		ImGui::Checkbox("Debug Console", &debugConsole);
-		ImGui::Checkbox("Bunny Hop", &bunnyHop);
+		ImGui::Checkbox("Bunny Hop", &bhopEnabled);
 		ImGui::Checkbox("ESP Snap Lines", &espSnapLines);
 		ImGui::End();
 		ImGui::EndFrame();
@@ -118,7 +115,6 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 		{
 			showMenu = !showMenu;
 		}
-		// Else if END key is pressed, exit the cheat
 		else if (GetAsyncKeyState(VK_END) & 1)
 		{
 			kiero::shutdown();
@@ -134,7 +130,8 @@ DWORD WINAPI MainThread(LPVOID lpReserved)
 		{
 			DisableDebugConsole();
 		}
-		Sleep(30);
+		CheckCheats();
+		Sleep(33);
 	}
 	return 0;
 }
